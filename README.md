@@ -1,5 +1,11 @@
 # BI1
 
+## Description
+Le but de ce projet est de voir les correlations qu'il existe entre la criminialité et la population.Pour ce faire, j'utiliserai les données fournies par opendata.swiss pour les chiffres concernant la criminalités et ... pour la population des différents cantons.
+
+
+
+
 Template for data analysis
 
  * The data directory must contain all data used during the analysis
