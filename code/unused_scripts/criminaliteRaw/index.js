@@ -37,7 +37,7 @@ function writeFile(data)
 function linkTables(infoCantons )
 {
     let formatedData=[];
-    fs.readFile('criminaliteRaw.csv', 'utf8', (err, data) => {
+    fs.readFile('criminaliteRawV2.csv', 'utf8', (err, data) => {
         //if there is an error stop the script
         if (err) {
             if (err.code === 'ENOENT') {
@@ -69,7 +69,10 @@ function linkTables(infoCantons )
 
                         cantonCriminalite[i]['CantonId'] = infoCantons[j]['Id'];
                         cantonCriminalite[i]['Id'] = i + 1; // because i begin at 0
-                
+
+                        //because we dont neeed this fields anymore (we have a relation directly to canton/annee in the other csv)
+                        delete cantonCriminalite[i]['Année'];
+                        delete cantonCriminalite[i]['Canton'];
                         
                         formatedData.push(cantonCriminalite[i]);
                         break;
