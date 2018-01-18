@@ -26,12 +26,12 @@ fs.readFile('dataTestPop.csv', 'utf8', (err, data) => {
         let output = clean(data);
         
 
-        jsonexport(aryCompets, {
+        jsonexport(output, {
             rowDelimiter: ';'
         }, function(err, csv) {
             if (err) return console.log(err);
 
-            fs.writeFile('output', csv, (err, fd) => {
+            fs.writeFile('output.csv', csv, (err, fd) => {
                 if (err) {
                     if (err.code === 'EEXIST') {
                         console.error('myfile already exists');
@@ -77,6 +77,7 @@ function clean(cantonsPopulation)
 
     //info of the previous row
     let previousCanton;
+    let previousAnnee;
 
     let totalTypePop;
     let totalAutoriResi;
@@ -86,14 +87,20 @@ function clean(cantonsPopulation)
 
     let supFields = ['Population total'];
     let row = {};
+    let idx = 1;
     
     for (let i = 0; i < cantonsPopulation.length; i++){
-        let currentCanton = cantonsPopulation[i]['Canton'];
+
+        let currentCanton   = cantonsPopulation[i]['Canton'];
+        let currentAnnee    = cantonsPopulation[i]['Année'];
       
-        if(currentCanton != previousCanton ){
+        if(currentCanton != previousCanton || currentAnnee  != previousAnnee ){
            
             if( Object.keys(row).length >= 1 ){
-                row['Canton'] = previousCanton;
+                row['id']       = idx;
+                idx++;
+                row['Canton']   = previousCanton;
+                row['Année']    = previousAnnee;
                 row['moyenAge'] =  parseInt(row['moyenAge']) / parseInt(row['Population total']);
                 formatedData.push(row)
             }
@@ -106,7 +113,6 @@ function clean(cantonsPopulation)
         }
 
         //info of the current row
-        
         let currentTypePop      = cantonsPopulation[i]['Type de population'];
         let currentAutoriResi   = cantonsPopulation[i]['Autorisation de résidence'];
         let currentSexe         = cantonsPopulation[i]['Sexe'];
@@ -134,7 +140,6 @@ function clean(cantonsPopulation)
             } 
             if( supFields.indexOf(currentSexe) == -1  )
             {
-                
                 row[currentSexe] = 0;
                 supFields.push(currentSexe);
             }
@@ -148,13 +153,15 @@ function clean(cantonsPopulation)
         row[currentSexe] = parseInt( row[currentSexe]) + parseInt(currentPop);
         row['Population total'] = parseInt( row['Population total']) + parseInt(currentPop);
     
-        previousCanton = currentCanton;
+        previousCanton  = currentCanton;
+        previousAnnee   = currentAnnee;
         
     }
-    row['Canton'] = previousCanton;
+    row['id']       = idx;
+    row['Canton']   = previousCanton;
+    row['Année']    = previousAnnee;
     row['moyenAge'] =  parseInt(row['moyenAge']) / parseInt(row['Population total']);
     formatedData.push(row);
     console.log(formatedData);
-    
-           
+    return formatedData;
 }
