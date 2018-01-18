@@ -1,5 +1,19 @@
 # data
-!!!!!!!!  PRECISER COMMENT OPENDATA A RECUPERER LES DONNEES !!!!!!!!!
+!!!!!!!!  
+TODO
+- PRECISER COMMENT OPENDATA A RECUPERER LES DONNEES
+- Vérifier si données sélectionnées
+- export les images
+
+
+
+- explication installation
+- simplification code & clean
+- ajouter la possiblité de mettre des arguments pour les noms des fichiers
+- 
+
+
+ !!!!!!!!!
 ## Raw data
  * [Raw data](/raw/readme.md)
  * Includes URL, description and date accessed
@@ -7,6 +21,10 @@
 Toutes les données brutes de ce projet ont été prises du site [opendata.swiss](https://opendata.swiss) (le 11.01.2018). Ce site autorise notamment le choix des données à exporter (pour par exemple avoir les données uniquement d'un canton), vous trouverez donc ci-dessous les colonnes qui ont été importer pour cette étude.
 
 Les données ont été importer français
+
+# DATE D ACCESS
+???????????
+
 
 ### Population
 
@@ -62,6 +80,8 @@ Les données sur la criminalités, quant à elles, regroupe le nombre de crimes/
 
 ![Données sélectionnées](./raw/img/crimSelect.png)
 
+# DATE D ACCESS
+???????????
 
 #### Provenance des données
 
