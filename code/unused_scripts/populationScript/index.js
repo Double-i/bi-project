@@ -4,7 +4,7 @@ const jsonexport = require('jsonexport');
 const csvString = require('csv-string');
 
 // Read the file 
-fs.readFile('dataTestPop.csv', 'utf8', (err, data) => {
+fs.readFile('populationsRaw.csv', 'utf8', (err, data) => {
     //if there is an error stop the script
     if (err) {
         if (err.code === 'ENOENT') {
@@ -24,14 +24,12 @@ fs.readFile('dataTestPop.csv', 'utf8', (err, data) => {
         }
 
         let output = clean(data);
-        
-
         jsonexport(output, {
             rowDelimiter: ';'
         }, function(err, csv) {
             if (err) return console.log(err);
 
-            fs.writeFile('output.csv', csv, (err, fd) => {
+            fs.writeFile('outputCantons.csv', csv, (err, fd) => {
                 if (err) {
                     if (err.code === 'EEXIST') {
                         console.error('myfile already exists');
@@ -97,7 +95,7 @@ function clean(cantonsPopulation)
         if(currentCanton != previousCanton || currentAnnee  != previousAnnee ){
            
             if( Object.keys(row).length >= 1 ){
-                row['id']       = idx;
+                row['Id']       = idx;
                 idx++;
                 row['Canton']   = previousCanton;
                 row['Année']    = previousAnnee;
@@ -157,7 +155,7 @@ function clean(cantonsPopulation)
         previousAnnee   = currentAnnee;
         
     }
-    row['id']       = idx;
+    row['Id']       = idx;
     row['Canton']   = previousCanton;
     row['Année']    = previousAnnee;
     row['moyenAge'] =  parseInt(row['moyenAge']) / parseInt(row['Population total']);
