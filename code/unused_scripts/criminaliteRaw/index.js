@@ -56,7 +56,7 @@ function linkTables(infoCantons )
                 console.error(err);
                 return;
             }
-            
+            let previousCantonId;
             for(let i = 0 ; i < cantonCriminalite.length; i++)
             {
                 cantonCriminalite[i]['CantonId'] = -1; // if no correspodance
@@ -66,9 +66,11 @@ function linkTables(infoCantons )
                     if( cantonCriminalite[i]['Année'] == infoCantons[j]['Annee'] &&
                         cantonCriminalite[i]['Canton'] == infoCantons[j]['Canton'])
                     {
+
                         cantonCriminalite[i]['CantonId'] = infoCantons[j]['Id'];
                         cantonCriminalite[i]['Id'] = i + 1; // because i begin at 0
                 
+                        
                         formatedData.push(cantonCriminalite[i]);
                         break;
                     }
