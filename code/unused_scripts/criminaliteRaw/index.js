@@ -6,27 +6,8 @@ const csvString = require('csv-string');
 
 
 // Read the file 
-fs.readFile('outputCantons.csv', 'utf8', (err, data) => {
-    //if there is an error stop the script
-    if (err) {
-        if (err.code === 'ENOENT') {
-            console.error('file does not exist outputCantons.csv');
-            return;
-        }
-        throw err;
-    }
-    //parse file into csv format, if there is an error, stop the script
-    csvParser(data, {
-        columns: true, //there is header columns into the file
-        delimiter: ';' //csv delimiter
-    }, function(err, data) {
-        if (err) {
-            console.error(err);
-            return;
-        }
-        getIdCanton(linkTables);
-    });
-});
+getIdCanton(linkTables);
+
 
 function writeFile(data)
 {
