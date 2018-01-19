@@ -20,7 +20,7 @@ TODO
 
 Toutes les données brutes de ce projet ont été prises du site [opendata.swiss](https://opendata.swiss) (le 11.01.2018). Ce site autorise notamment le choix des données à exporter (pour par exemple avoir les données uniquement d'un canton), vous trouverez donc ci-dessous les colonnes qui ont été importer pour cette étude.
 
-Les données ont été importer en français, le 11.01.2018 pour la population (et crimnalité v1) et le 18.01.2018 pour la criminalité (V2) 
+Les données ont été importées en français, le 11.01.2018 pour la population (et crimnalité v1) et le 18.01.2018 pour la criminalité (V2). 
 
 
 ### Population
@@ -77,7 +77,6 @@ Les données sur la criminalités, quant à elles, regroupe le nombre de crimes/
 | Degré de réalisation - Total Elucidées           | nombre d'infractions/crimes commis non élucidées                       |
 
 
-;Degré de réalisation - Total Degré d'élucidation - Total;Degré de réalisation - Total Non élucidées;Degré de réalisation - Total Elucidées
 
 ![Données sélectionnées](./raw/img/crimSelectV2.png)
 
