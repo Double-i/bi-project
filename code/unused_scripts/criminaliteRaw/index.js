@@ -2,21 +2,24 @@ const fs = require('fs');
 const csvParser = require('csv-parse');
 const jsonexport = require('jsonexport');
 const csvString = require('csv-string');
+const arg = require('commander');
 
-let args = process.argv.slice(2);
 let criminaliteFilePath;
 let populationFilePath;
 
 
-if(args.length < 2)
-{
-    console.log("1st arg: path of the population csv file | 2nd arg: path of the criminality csv file");
-    return;
-}
-populationFilePath = args[0];
-criminaliteFilePath = args[1];
+arg
+    .usage('-p <path_pop_file> -c <path_crimi_file>')
+    .option('-p, --popFile <value>', 'Path to the processed population file')
+    .option('-c, --crimiFile <value>', 'Path to the criminality raw file')
+    .option('-o, --output [value]', 'Path to the output file, default: outputCrimi.csv')
+    .parse(process.argv);
 
 
+
+populationFilePath = arg.popFile;
+criminaliteFilePath = arg.crimiFile;
+let output = arg.output || 'outputCrimi.csv';
 
 // Read the file 
 getIdCanton(populationFilePath, linkTables);
@@ -35,7 +38,7 @@ function writeFile(data)
     }, function(err, csv) {
         if (err) return console.log(err);
 
-        fs.writeFile('ouputCriminaliteV2.csv', csv, (err, fd) => {
+        fs.writeFile(output, csv, (err, fd) => {
             if (err) {
                 if (err.code === 'EEXIST') {
                     console.error('myfile already exists');

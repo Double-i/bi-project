@@ -2,9 +2,20 @@ const fs = require('fs');
 const csvParser = require('csv-parse');
 const jsonexport = require('jsonexport');
 const csvString = require('csv-string');
+const arg = require('commander');
+
+arg
+    .usage('-p <path_pop_file>')
+    .option('-p, --popFile <value>', 'Path to the raw population file')
+    .option('-o, --output [value]', 'Path to the output file, default: outputPopulation.csv')
+    .parse(process.argv);
+
+let inputPath = arg.popFile;
+let outputPath = arg.output || 'outputPopulation.csv';
+
 
 // Read the file 
-fs.readFile('populationsRaw.csv', 'utf8', (err, data) => {
+fs.readFile(inputPath, 'utf8', (err, data) => {
     //if there is an error stop the script
     if (err) {
         if (err.code === 'ENOENT') {
@@ -23,13 +34,13 @@ fs.readFile('populationsRaw.csv', 'utf8', (err, data) => {
             return;
         }
 
-        let output = clean(data);
+        let output = sumRows(data);
         jsonexport(output, {
             rowDelimiter: ';'
         }, function(err, csv) {
             if (err) return console.log(err);
 
-            fs.writeFile('outputCantons.csv', csv, (err, fd) => {
+            fs.writeFile(outputPath, csv, (err, fd) => {
                 if (err) {
                     if (err.code === 'EEXIST') {
                         console.error('myfile already exists');
@@ -68,7 +79,7 @@ function calcTotalAge( nbPopulation, minMaxAge)
  * 
  * @param {Object} cantonsPopulation all the lines of the files in Object format
  */
-function clean(cantonsPopulation)
+function sumRows(cantonsPopulation)
 {
     let formatedData = [];
     let ageRegex = /[0-9]+/g;
