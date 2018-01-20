@@ -10,8 +10,8 @@ let populationFilePath;
 
 arg
     .usage('-p <path_pop_file> -c <path_crimi_file>')
-    .option('-p, --popFile <value>', 'Path to the processed population file')
-    .option('-c, --crimiFile <value>', 'Path to the criminality raw file')
+    .option('-p, --popFile <value>', 'Path to the processed population csv file')
+    .option('-c, --crimiFile <value>', 'Path to the criminality raw csv file')
     .option('-o, --output [value]', 'Path to the output file, default: outputCriminalite.csv')
     .parse(process.argv);
 
@@ -19,7 +19,7 @@ arg
 
 populationFilePath = arg.popFile;
 criminaliteFilePath = arg.crimiFile;
-let output = arg.output || 'outputCrimi.csv';
+let output = arg.output || 'outputCriminalite.csv';
 
 // Read the file 
 getIdCanton(populationFilePath, linkTables);
@@ -46,6 +46,8 @@ function writeFile(data)
                 }
                 throw err;
             }
+            console.log("Finished");
+            console.log(outputPath + " has been created");
         });
     });
 }

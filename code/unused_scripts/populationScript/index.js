@@ -6,7 +6,7 @@ const arg = require('commander');
 
 arg
     .usage('-p <path_pop_file>')
-    .option('-p, --popFile <value>', 'Path to the raw population file')
+    .option('-p, --popFile <value>', 'Path to the raw population csv file')
     .option('-o, --output [value]', 'Path to the output file, default: outputPopulation.csv')
     .parse(process.argv);
 
@@ -24,6 +24,8 @@ fs.readFile(inputPath, 'utf8', (err, data) => {
         }
         throw err;
     }
+    console.log("processing data...");
+
     //parse file into csv format, if there is an error, stop the script
     csvParser(data, {
         columns: true, //there is header columns into the file
@@ -48,6 +50,8 @@ fs.readFile(inputPath, 'utf8', (err, data) => {
                     }
                     throw err;
                 }
+                console.log("Finished");
+                console.log(outputPath + " has been created");
             });
         });
 
@@ -171,6 +175,6 @@ function sumRows(cantonsPopulation)
     row['Année']    = previousAnnee;
     row['moyenAge'] =  parseInt(row['moyenAge']) / parseInt(row['Population total']);
     formatedData.push(row);
-    console.log(formatedData);
+    
     return formatedData;
 }
