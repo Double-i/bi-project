@@ -54,5 +54,6 @@ En ce qui concerne notre question, Uri n'a pas toujours été le canton le plus 
 
 
 # Conclusion
-Pour terminer, on peut dire que Uri est un canton les plus sûr de Suisse. Et qu'il semblerait qu'il y est un lien entre la criminalité et la densité de la population. Il aurait été intéressant de directement comparer la densité avec le taux de criminalité afin de voir s'il existe une véritable corrélation entre les deux. 
+Pour terminer, on peut dire que Uri est un canton les plus sûr de Suisse. Et qu'il semblerait qu'il y est un lien entre la criminalité et la densité de la population. Il aurait été intéressant de directement comparer la densité avec le taux de criminalité afin de voir s'il existe une véritable corrélation entre les deux.
+ On a également observer un baisse général de la criminalité en Suisse depuis 2012.
 
