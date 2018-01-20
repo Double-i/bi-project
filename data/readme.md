@@ -1,12 +1,7 @@
 # data
 !!!!!!!!  
 TODO
-- PRECISER COMMENT OPENDATA A RECUPERER LES DONNEES
-- Vérifier si données sélectionnées
 - export les images
-
-
-
 - explication installation
 - simplification code & clean
 - ajouter la possiblité de mettre des arguments pour les noms des fichiers
@@ -15,13 +10,10 @@ TODO
 
  !!!!!!!!!
 ## Données brutes
- * [Raw data](/raw/readme.md)
- * Includes URL, description and date accessed
-
 
 Toutes les données brutes de ce projet proviennent du site [opendata.swiss](https://opendata.swiss) (le 11.01.2018). Ce site permet de choisir les données à exporter comme par exemple sur combien d'année prendre les données, vous trouverez donc ci-dessous les colonnes qui ont été choisies pour cette étude.
 
-Les données ont été importées en français, le <b>11.01.2018</b> pour le fichier sur la population des cantons (et crimnalité v1) et le 18.01.2018 pour la criminalité (V2). 
+Les données ont été importées en français, le <b>11.01.2018</b> pour le fichier sur la population des cantons  et le  <b>18.01.2018</b> pour la criminalité. 
 
 
 ### Population
@@ -79,66 +71,17 @@ Les données ont été importées en sélectionnant les colonnes suivantes. Les 
 
 
 
-## Processed data
- * [Processed data](processed/readme.md)
- * File should be named so it is easy to see which [script](../code/) has generated the data
- * Processed data should be [tidy](https://github.com/jtleek/datasharing)
+## Données traitées
 
-## Study design
- * How data were collected...
- * ...
-
-## Code book
- * Description of variables and their units
- * ...
-
-## Instruction list
- * How to go from raw data to tidy data
-
- Afin de générer les données dont nous avons besoins pour notre étude nous avons utiliser deux scripts Javascript.
-
- ## Population
-Voici à quoi ressembles les données obtenues depuis le site Opendata.swiss. 
-
-| Année | Canton                | Type de population                  | Autorisation de résidence                              | Sexe  | Classe d'age | Pop. rési. perm. et non perm. |
-|-------|-----------------------|-------------------------------------|--------------------------------------------------------|-------|--------------|-------------------------------|
-| 2010  | Zürich                | Population résidante permanente     | Suisse                                                 | Homme | 0-4 ans      | 27340                         |
-| 2010  | Zürich                | Population résidante permanente     | Fonctionnaire international sans immunité diplomatique | Homme | 25-29 ans    | 24684                         |
-| 2010  | Appenzell Innerrhoden | Population résidante non permanente | Fonctionnaire international sans immunité diplomatique | Homme | 40-44 ans    | 5                             | 
-
-Comme vous pouvez le voir, chaque ligne offre pas mal d'informations et sont déjà formatées. Afin de simplifier le dataset et de le rendre utilisable pour notre étude. Nous allons regrouper les données par année et cantons. Afin d'obtenir ceci.
-
-| âge moyen^^1^^ | Population total^^2^^ | Pop. rési. perm.^^2^^ | Suisse^^2^^ | Homme^^2^^ | Pop. rési. non perm.^^2^^ | Id^^2^^ | Canton^^3^^       | Année^^2^^ | Fonctionnaire interna. sans immunité diplo.^^2^^ |
-|--------------------|------------------|------------------|--------|-------|----------------------|----|-----------------------|-------|---------------------------------------------|
-| 13.861833000153775 | 52024            | 27340            | 52024  | 52024 | 24684                | 1  | Zürich                | 2010  | 24684                                       |                               
-| 42                 | 5                | 0                | 0      | 5     | 5                    | 2  | Appenzell Innerrhoden | 2010  | 5                                           | 
-
-1. float
-2. int 
-3. String
-
- Des colonnes supplémentaires se sont ajoutées. 
-1. Moyen d'âge (calcule expliqué en-dessous)
-2. Population total 
-3. Homme (issue de sexe. S'il y avait eu une ligne avec femme comme sexe une autre colonne Femme aurait également été ajoutée)
-4. Suisse (issue de la colonne autorisation de résidence)
-5. Fonctionnaire international sans immunité diplomatique (issue de la colonne autorisation de résidence)
-6. ...
-
-les colonnes 3 à 6 sont ajoutées en fonction des valeurs des colonnes `Type de population`, `Autorisation de résidence` et  `Sexe`.
+ Afin de générer les données dont nous avons besoins pour notre étude, nous avons utilisé deux scripts Javascript.
 
 
+ 
 
-
-*Age moyen: si on prend la classe d'âge 0-4 ans et que l'on fait la moyenne de cette âge (`(4+0)/2`) on obtient `2` on le multiple par le nombre de personne pour obtenir un nombre total d'année `2 * 27340 = 54680`. Nous additionnons le nombre total d'année des lignes ayant le même canton/année: `(25+29) / 2 * 24684 = 666468 => (54680 + 666468) = 721147`. Enfin nous le division par la population totale du cantons (Population total).
-
-### Instruction à suivre
-Tout d'abord, importez les deux CSV comme indiqué dans les parties `Données sélectionnées` depuis le site Opendata.swiss ou prenez-les directement depuis le dossier `/data/raw/`.
-
-- Importer le repo.
+## Instruction à suivre
+Pour réproduire ces données importez les deux fichier CSV depuis le site avec les colonnes  comme indiqué dans les parties `Données sélectionnées` depuis le site Opendata.swiss ou prenez-les directement depuis le dossier `/data/raw/`. Suivez 
+- Ouvrez les fichiers avec un éditeur et supprimer 
+- Importez le repo.
 - Lancez un invite de commande et déplacer vous jusqu'au dossier `code/scripts/`
-- Suivez ensuite les instructions d'utilisation de scripts disponibles [ici](../code/readme.md)
-
- ## Criminalite
-
+- Lancez le script sur la population (`code/scripts/populationScript.js`) puis le second (`code/scripts/criminaliteScript.js`). (Suivez les instructions d'utilisation des scripts disponibles [ici](../code/readme.md) )
 
