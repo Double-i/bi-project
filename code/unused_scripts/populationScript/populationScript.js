@@ -114,10 +114,15 @@ function sumRows(cantonsPopulation)
                 idx++;
                 row['Canton']   = previousCanton;
                 row['Année']    = previousAnnee;
-                row['moyenAge'] =  parseInt(row['moyenAge']) / parseInt(row['Population total']);
+
+                console.log(row['âge moyen']);
+                // make an avg of the age of canton
+                row['âge moyen'] =  parseInt(row['âge moyen']) / parseInt(row['Population total']);
+            
                 formatedData.push(row)
             }
-            row = {moyenAge: 0};
+            row = {};
+            row['âge moyen'] = 0;
             for(let j = 0 ; j < supFields.length; j++)
             {
                 row[supFields[j]] = 0;
@@ -159,7 +164,7 @@ function sumRows(cantonsPopulation)
         }
         
        
-        row['moyenAge'] = parseInt(row['moyenAge']) + calcTotalAge(currentPop, currentMinMaxAge);
+        row['âge moyen'] = parseInt(row['âge moyen']) + calcTotalAge(currentPop, currentMinMaxAge);
     
         row[currentTypePop] = parseInt( row[currentTypePop ]) + parseInt(currentPop);
         row[currentAutoriResi] = parseInt( row[currentAutoriResi]) + parseInt(currentPop);
@@ -173,7 +178,7 @@ function sumRows(cantonsPopulation)
     row['Id']       = idx;
     row['Canton']   = previousCanton;
     row['Année']    = previousAnnee;
-    row['moyenAge'] =  parseInt(row['moyenAge']) / parseInt(row['Population total']);
+    row['âge moyen'] =  parseInt(row['âge moyen']) / parseInt(row['Population total']);
     formatedData.push(row);
     
     return formatedData;
