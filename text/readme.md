@@ -34,7 +34,7 @@ Les données sur la population ainsi que celle sur la criminalités ont été r�
 
 # Résultats
 <img src="../figures/final/2016-CriminaliteParCanton.png" alt="crimnalité par canton en 2016"/>
-Ce graphique montre, pour chaque canton, le taux de criminalité par habitant. Trié du haut le plus haut au plus bas, il permet facilement de déterminer une listes des cantons les plus / moins sûrs.
+Ce graphique montre, pour chaque canton, le taux de criminalité par habitant. Trié du taux le plus haut au plus bas, il permet facilement de déterminer une liste des cantons les plus / moins sûrs.
 
 
 On peut remarquer que les deux cantons où le taux de criminalité par habitant est le plus élévé (et de loin), Gènève et Bâle-ville, sont des cantons avec de très grandes villes et peu de supérficie (km^2). D'ailleurs, ces deux cantons font partie des 2 cantons les plus denses de Suisse (et de loin également). On pourrait donc établir que la criminalité augmente selon la densité de population de l'endroit où nous nous trouvons. Dans le même sens, Uri est le deuxième canton avec la densité de population la plus basse de Suisse.
