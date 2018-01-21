@@ -1,23 +1,8 @@
-# Text
-
- * Readme file that includes a step-by-step instructions to run the analysis (if not present in the [data folder](../data/readme.md))
- * and the final report
-
-## Final report
- * Should include
-   * Title
-   * Introduction (motivation)
-   * Methods (statistics you used)
-   * Results (including measures of uncertainty)
-   * Conclusions (including potential problems or limitations)
- * It should tell a story
- * It should not include every analysis that had been run
-
 # La criminalité en Suisse
 # Introduction
 La Suisse est un des pays avec le taux de criminalité le plus bas du monde. Au niveau de ses régions qu'en est-il ? Quel canton commet le moins d'infraction au code pénal ?  
 
-Le but de ce dossier est de déterminer `quel canton était le plus sûr de Suisse et d'explorer les liens qu'il pourrait y avoir entre l'environnement des différents cantons et ce taux de criminalité.
+Le but de ce dossier est de déterminer `quel canton était le plus sûr de Suisse ?` et d'explorer les liens qu'il pourrait y avoir entre l'environnement des différents cantons et ce taux de criminalité.
 
 
 ## Provence des données
@@ -34,10 +19,11 @@ le fichier sur la criminalite contient, quant à lui, les nombre total d'infract
 
 Les données sur la population ainsi que celle sur la criminalités ont été récoltées par Office fédéral de la statistique OFS qui est le centre de compétence de la statistique publique suisse.
 
-Concernant les transformations apportées aux fichiers csv, vous pouvez consulter [cette section ](../code/code/readme.md)
+Concernant les transformations apportées aux fichiers csv, vous pouvez consulter [cette section ](../code/readme.md)
 
 # Résultats
 <img src="../figures/final/2016-CriminaliteParCanton.png" alt="crimnalité par canton en 2016"/>
+
 Ce graphique montre, pour chaque canton, le taux de criminalité par habitant. Trié du taux le plus haut au plus bas, il permet facilement de déterminer une listes des cantons les plus / moins sûrs.
 
 
@@ -51,7 +37,9 @@ Nous avons pu déterminer `quel canton était le plus sûr de Suisse ?`, il s'ag
 
 Voila, un graphique qui permet d'avoir une idée sur plusieurs années. ([lien vers l'image](../figures/final/EvolutionCriminaliteParCanton.png) pour faciliter la lecture.)
 
+
 On peut observer que depuis 2012, il y a une baisse de criminalité dans presque tous les cantons. Nous avons pas été plus loin quant à la raison de cette baisse mais cet [article](https://www.24heures.ch/suisse/parlement-veut-durcir-code-penal/story/25814435) peut être une piste.
+
 
 En ce qui concerne notre question, Uri n'a pas toujours été le canton le plus bas mais toujours en bonne position.
 

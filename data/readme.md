@@ -69,7 +69,7 @@ Les données ont été importées en sélectionnant les colonnes suivantes. Les 
  Les données traitées sont disponibles dans le dossier `data/processed/`
 
 
-## Instruction à suivre
+## Instructions à suivre
 Pour réproduire ces données, importez les deux fichiers CSV depuis le site avec les colonnes comme indiqué dans les parties `Données sélectionnées` depuis le site Opendata.swiss ou prenez-les directement depuis le dossier `/data/raw/` de ce repo. Suivez ensuite ces instructions:
 - Ouvrez les fichiers avec un éditeur et supprimez les deux première lignes. (il s'agit du titre du dataset ainsi que d'une ligne vide)
 - Importez le repo ou le dossier avec les scripts `code/scripts/`.
