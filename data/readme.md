@@ -50,7 +50,7 @@ Les données sur la criminalités, quant à elles, regroupe le nombre de crimes 
  
 Les données ont été importées en sélectionnant les colonnes suivantes. Les données avec ont été importées avec l'option "Fichier texte (séparateur: point-virgule) avec en-tête"
 
-![Données sélectionnées](./img/crimSelectV2.png)
+![Données sélectionnées](./img/crimSelect.png)
 
 | Nom                                              | Description                                                            |
 |--------------------------------------------------|------------------------------------------------------------------------|
