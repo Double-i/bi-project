@@ -2,7 +2,7 @@
 
 ## Description
 
-Le but de cette étude est de savoir quel est le canton le plus sur de Suisse en fonction du nombre d'infraction par habitant. j'utiliserai les données fournies par opendata.swiss.
+Le but de cette étude est de savoir quel est le canton le plus sûr de Suisse en fonction du nombre d'infraction par habitant. j'utiliserai les données fournies par opendata.swiss.
 
 
 ## Contenu

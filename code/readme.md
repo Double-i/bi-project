@@ -7,7 +7,7 @@ Vous trouverez ici les deux scripts réalisés dans le but de formater les donn�
 Pré-requis: [node.js](https://nodejs.org/en/) (testé sur la v.8.9.1)
 
 
-Une fois node.js installé, vous pouvez installer les dépendances des scripts. 
+Une fois node.js prêt, vous pouvez installer les dépendances des scripts. 
 - ouvrez un terminal
 - placez-vous dans le dossier des scripts
 - installez les dépendances avec `npm install`
@@ -16,33 +16,23 @@ Une fois node.js installé, vous pouvez installer les dépendances des scripts.
 
 Vous pouvez maintenant exécuter le script désiré. 
 
-Lancez la commande `node populationScript.js -h` pour avoir des informations sur les arguments à renseigner 
+Lancez la commande `node populationScript.js -h` (ou `node populationScript.js -h`) pour avoir des informations sur les arguments à renseigner 
 
 Pour lancer le script sur la population, tappez la commande suivant:  (dans le cas où l'argument `-o` n'est pas renseigner le fichier de sortie sera `outputPopulation.csv` )
 
 
 ```javascript
-node index.js -p <chemin/vers/populationRaw.csv> [-o <chemin/vers/fichierDeSortie.csv>]
+node populationScript.js -p <chemin/vers/populationRaw.csv> [-o <chemin/vers/fichierDeSortie.csv>]
 ```
 
 
 Pour lancer le script sur la criminalite, tappez la commande suivant:  (dans le cas où l'argument `-o` n'est pas renseigner le fichier de sortie sera `outputCriminalite.csv` )
 
 ```
-node index.js -p <chemin/vers/populationProcessed.csv> -c <chemin/vers/criminaliteRaw.csv> [-o <chemin/vers/fichierDeSortie.csv>]
+node criminaliteScript.js -p <chemin/vers/populationProcessed.csv> -c <chemin/vers/criminaliteRaw.csv> [-o <chemin/vers/fichierDeSortie.csv>]
 ```
 
 
-## Unused scripts
- * [Unused scripts](unused_scripts/readme.md)
- * Might be less commented but some comments help in any case
- * May be multiple versions
- * May include analyses that are later discarded
-
-## Final scripts
- * [Final scripts](scripts/readme.md)
- * Clearly commented to explain what, when, why, and how
- * Should include processing details
 
 ## Traitements effectués
 ### Population
@@ -58,13 +48,13 @@ Comme vous pouvez le voir, chaque ligne offre pas mal d'informations et sont dé
 
 | 1.âge moyen        | 2.Population total | 3.Pop. rési. perm. | 4.Suisse      | 5.Homme      | 6.Pop. rési. non perm. | 7.Id | 8.Canton              | 9.Année | 10.Fonctionnaire interna. sans immunité diplo. |
 |--------------------|--------------------|--------------------|---------------|--------------|------------------------|------|-----------------------|---------|------------------------------------------------|
-| 13.861833000153775 | 52024              | 27340              | 52024         | 52024        | 24684                  | 1    | Zürich                | 2010    | 24684                                          |      
+| 13.8618... | 52024              | 27340              | 52024         | 52024        | 24684                  | 1    | Zürich                | 2010    | 24684                                          |      
 | 42                 | 5                  | 0                  | 0             | 5            | 5                      | 2    | Appenzell Innerrhoden | 2010    | 5                                              | 
 
  Des colonnes supplémentaires se sont ajoutées. les colonnes 3 à 6 sont ajoutées en fonction des valeurs des colonnes `Type de population`, `Autorisation de résidence` et  `Sexe`. 
-1. Moyen d'âge (calcule expliqué en-dessous)
+1. Age moyen  (calcule expliqué en-dessous)
 2. Population total 
-3. Homme (issue de sexe. S'il y avait eu une ligne avec femme comme sexe une autre colonne Femme aurait également été ajoutée)
+3. Homme (issue de sexe. S'il y avait eu une ligne avec femme comme sexe une autre colonne `Femme` aurait également été ajoutée)
 4. Suisse (issue de la colonne autorisation de résidence)
 5. Fonctionnaire international sans immunité diplomatique (issue de la colonne autorisation de résidence)
 6. ...

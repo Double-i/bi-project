@@ -1,7 +1,5 @@
 # Données 
 
-
- !!!!!!!!!
 ## Données brutes
 
 Toutes les données brutes de ce projet proviennent du site [opendata.swiss](https://opendata.swiss). Ce site permet de choisir les données à exporter comme par exemple sur combien d'année prendre les données, vous trouverez donc ci-dessous les colonnes qui ont été choisies pour cette étude.
