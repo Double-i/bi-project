@@ -12,8 +12,8 @@ Les données ont été importées en français, le <b>11.01.2018</b> pour le fic
 Les données sur la population regroupent pour chaque canton et année, le nombre d'habitants, par sexe et par autorisation de résidence (Suisse - permis B - Permis C etc.). 
 
 #### Liens
-- ![page de présentation du dataset](https://opendata.swiss/fr/dataset/permanent-and-non-permanent-resident-population-by-canton-sex-residence-permit-age-class-and-citizen)
-- ![page d'accès au dataset](https://www.pxweb.bfs.admin.ch/pxweb/fr/px-x-0103010000_101/px-x-0103010000_101/px-x-0103010000_101.px)
+- [page de présentation du dataset](https://opendata.swiss/fr/dataset/permanent-and-non-permanent-resident-population-by-canton-sex-residence-permit-age-class-and-citizen)
+- [page d'accès au dataset](https://www.pxweb.bfs.admin.ch/pxweb/fr/px-x-0103010000_101/px-x-0103010000_101/px-x-0103010000_101.px)
 
 
 #### Données sélectionnées
@@ -42,8 +42,8 @@ Les données sur la nationalités n'ont pas été sélectionnées car le site op
 Les données sur la criminalités, quant à elles, regroupe le nombre de crimes illucidés/non-illucidés faits par canton et par année. 
 
 #### Liens
-- ![page de présentation du dataset](https://opendata.swiss/en/dataset/criminal-offences-registered-by-the-police-according-to-the-swiss-criminal-code-by-canton-level-of-c)
-- ![page d'accès au dataset](https://www.pxweb.bfs.admin.ch/pxweb/de/px-x-1903020100_101/-/px-x-1903020100_101.px)
+- [page de présentation du dataset](https://opendata.swiss/en/dataset/criminal-offences-registered-by-the-police-according-to-the-swiss-criminal-code-by-canton-level-of-c)
+- [page d'accès au dataset](https://www.pxweb.bfs.admin.ch/pxweb/de/px-x-1903020100_101/-/px-x-1903020100_101.px)
 
 
  #### Données sélectionnées
