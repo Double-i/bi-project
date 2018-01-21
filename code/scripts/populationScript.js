@@ -111,22 +111,18 @@ function sumRows(cantonsPopulation)
            
             if( Object.keys(row).length >= 1 ){
                 row['Id']       = idx;
-                idx++;
                 row['Canton']   = previousCanton;
                 row['Année']    = previousAnnee;
-
-                console.log(row['âge moyen']);
-                // make an avg of the age of canton
-                row['âge moyen'] =  parseInt(row['âge moyen']) / parseInt(row['Population total']);
-            
+                row['âge moyen'] =  parseInt(row['âge moyen']) / parseInt(row['Population total']);// make an avg of the age of canton
                 formatedData.push(row)
+                idx++;
             }
             row = {};
             row['âge moyen'] = 0;
+            // we add the additional columns
             for(let j = 0 ; j < supFields.length; j++)
             {
                 row[supFields[j]] = 0;
-                
             }   
         }
 
@@ -136,8 +132,7 @@ function sumRows(cantonsPopulation)
         let currentSexe         = cantonsPopulation[i]['Sexe'];
         let currentClasseAge    = cantonsPopulation[i]['Classe d\'âge'];
         let currentPop          = cantonsPopulation[i]['Population résidante permanente et non permanente']
-        //console.log(currentTypePop, currentAutoriResi, currentSexe, currentClasseAge, currentPop);
-
+        
         // array of the max age and min age of the current raw
         let currentMinMaxAge    = currentClasseAge.match(ageRegex);
         
@@ -145,7 +140,6 @@ function sumRows(cantonsPopulation)
         //if the kind of type Pop, Auto. resid. or gender wasnt added to the row we set it to 0
         if(currentPop > 0)
         {
-           
             if(supFields.indexOf(currentTypePop)  == -1){
                 row[currentTypePop] = 0;
                 supFields.push(currentTypePop);
@@ -163,9 +157,8 @@ function sumRows(cantonsPopulation)
             }
         }
         
-       
+        // add population to the correct column
         row['âge moyen'] = parseInt(row['âge moyen']) + calcTotalAge(currentPop, currentMinMaxAge);
-    
         row[currentTypePop] = parseInt( row[currentTypePop ]) + parseInt(currentPop);
         row[currentAutoriResi] = parseInt( row[currentAutoriResi]) + parseInt(currentPop);
         row[currentSexe] = parseInt( row[currentSexe]) + parseInt(currentPop);

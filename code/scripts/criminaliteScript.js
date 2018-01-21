@@ -7,7 +7,7 @@ const arg = require('commander');
 let criminaliteFilePath;
 let populationFilePath;
 
-
+// ask for args
 arg
     .usage('-p <path_pop_file> -c <path_crimi_file>')
     .option('-p, --popFile <value>', 'Path to the processed population csv file')
@@ -21,7 +21,7 @@ populationFilePath = arg.popFile;
 criminaliteFilePath = arg.crimiFile;
 let output = arg.output || 'outputCriminalite.csv';
 
-// Read the file 
+// begin work...
 getIdCanton(populationFilePath, linkTables);
 
 /**
@@ -62,14 +62,12 @@ function linkTables(infoCantons )
     let formatedData=[];
     read(criminaliteFilePath, (cantonCriminalite) => 
     {
-
         let previousCantonId;
         for(let i = 0 ; i < cantonCriminalite.length; i++)
         {
             cantonCriminalite[i]['CantonId'] = -1; // if no correspodance
             for(let j = 0; j < infoCantons.length; j++)
             {
-                //console.log(cantonCriminalite[i]['Année'], "=", infoCantons[j]['Année']);
                 if( cantonCriminalite[i]['Année'] == infoCantons[j]['Annee'] &&
                     cantonCriminalite[i]['Canton'] == infoCantons[j]['Canton'])
                 {
@@ -84,7 +82,6 @@ function linkTables(infoCantons )
                     break; // it match so we get out of the for
                 }
             }
-            // no correspondance
         }
         writeFile(formatedData);
     });
