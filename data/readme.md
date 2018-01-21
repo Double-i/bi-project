@@ -20,7 +20,7 @@ Les données sur la population regroupent pour chaque canton et année, le nombr
 
 Les données ont été importées en sélectionnant les colonnes suivantes. Les données avec ont été importées avec l'option "Fichier texte (séparateur: point-virgule) avec en-tête"
 
-![Données sélectionnées](./raw/img/popSelect.png)
+![Données sélectionnées](./img/popSelect.png)
 
 | Nom                                        | Description                                                                                |
 |--------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ Les données ont été importées en sélectionnant les colonnes suivantes. Les 
 | Population permenante et non-permanente*   | le nombre de personne - la population  (int)                                               | 
 
 
-Les données sur la nationalités n'ont pas été sélectionnées car le site opendata.swiss n'autorise l'affichage/import que de 2.5 millons enregistrements, or, une fois toutes sélectionnées, les nationalités, en ajoutent près de 30 millions. 
+Les données sur la nationalités n'ont pas été sélectionnées car le site opendata.swiss n'autorise l'affichage/import que de 2.5 millions enregistrements, or, une fois toutes sélectionnées, les nationalités, en ajoutent près de 30 millions. 
 
 
 
@@ -50,7 +50,7 @@ Les données sur la criminalités, quant à elles, regroupe le nombre de crimes 
  
 Les données ont été importées en sélectionnant les colonnes suivantes. Les données avec ont été importées avec l'option "Fichier texte (séparateur: point-virgule) avec en-tête"
 
-![Données sélectionnées](./raw/img/crimSelectV2.png)
+![Données sélectionnées](./img/crimSelectV2.png)
 
 | Nom                                              | Description                                                            |
 |--------------------------------------------------|------------------------------------------------------------------------|
