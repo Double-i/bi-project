@@ -44,7 +44,7 @@ node index.js -p <chemin/vers/populationProcessed.csv> -c <chemin/vers/criminali
  * Clearly commented to explain what, when, why, and how
  * Should include processing details
 
-## Traitement effectués
+## Traitements effectués
 ### Population
 Voici à quoi ressemblent les données obtenues depuis le site Opendata.swiss. 
 
@@ -56,7 +56,7 @@ Voici à quoi ressemblent les données obtenues depuis le site Opendata.swiss.
 
 Comme vous pouvez le voir, chaque ligne offre pas mal d'informations et sont déjà formatées. Afin de simplifier le dataset et de le rendre utilisable pour notre étude. Nous allons regrouper les données par année et cantons. Afin d'obtenir ceci.
 
-| 1.âge moyen        | 2.Population total | 3.Pop. rési. perm. | 4.Suisse^^2^^ | 5.Homme^^2^^ | 6.Pop. rési. non perm. | 7.Id | 8.Canton              | 9.Année | 10.Fonctionnaire interna. sans immunité diplo. |
+| 1.âge moyen        | 2.Population total | 3.Pop. rési. perm. | 4.Suisse      | 5.Homme      | 6.Pop. rési. non perm. | 7.Id | 8.Canton              | 9.Année | 10.Fonctionnaire interna. sans immunité diplo. |
 |--------------------|--------------------|--------------------|---------------|--------------|------------------------|------|-----------------------|---------|------------------------------------------------|
 | 13.861833000153775 | 52024              | 27340              | 52024         | 52024        | 24684                  | 1    | Zürich                | 2010    | 24684                                          |      
 | 42                 | 5                  | 0                  | 0             | 5            | 5                      | 2    | Appenzell Innerrhoden | 2010    | 5                                              | 

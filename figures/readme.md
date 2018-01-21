@@ -10,3 +10,8 @@
  * [Final figures](finale/readme.md)
  * Small subset of the original Figures
  * Must be pretty and clear
+
+
+# Mauvais graphique
+
+# Mesure utilisé
