@@ -15,19 +15,20 @@
 
 # La criminalité en Suisse
 # Introduction
+La Suisse est un des pays avec le taux de criminalité le plus bas du monde. Au niveau de ses régions qu'en est-il ? Quel canton commet le moins d'infraction au code pénal ?  
 
-
-Le but de ce dossier est de déterminer quel canton était le plus sûr de Suisse (dans le sens, dans quel canton il y a le moins d'infractions par habitant) et d'explorer les liens qu'il pourrait y avoir avec l'environnement des différents cantons 
-
-
-
-
+Le but de ce dossier est de déterminer `quel canton était le plus sûr de Suisse et d'explorer les liens qu'il pourrait y avoir avec l'environnement des différents cantons et ce taux de criminalité.
 
 
 ## Provence des données
 Les données de cette étude ont été exportées depuis le site [Opendata.swiss](https://opendata.swiss/en/):
 - le <b>11.01.2018</b> pour le fichier sur la population
-- le <b>18.01.2018</b> pour le fichier sur la criminalité.
+- le <b>18.01.2018</b> pour le fichier sur la criminalité.`
+
+le fichier sur la population contient la population par canton et par année ainsi que d'autres données telles que l'âge moyen dans le canton.
+
+le fichier sur la criminalite contient, quant à lui, les nombre total d'infraction par canton et année.
+
 
 Les données sur la population ainsi que celle sur la criminalités ont été récoltées par Office fédéral de la statistique OFS qui est le centre de compétence de la statistique publique suisse.
 
@@ -54,6 +55,10 @@ En ce qui concerne notre question, Uri n'a pas toujours été le canton le plus 
 
 
 # Conclusion
-Pour terminer, on peut dire que Uri est un canton les plus sûr de Suisse. Et qu'il semblerait qu'il y est un lien entre la criminalité et la densité de la population. Il aurait été intéressant de directement comparer la densité avec le taux de criminalité afin de voir s'il existe une véritable corrélation entre les deux.
- On a également observer un baisse général de la criminalité en Suisse depuis 2012.
+En résumé, on peut dire que Uri est un des canton les plus sûr de Suisse. Et qu'il semblerait qu'il y est un lien entre la criminalité et la densité de la population. Il aurait été intéressant de directement comparer la densité avec le taux de criminalité afin de voir s'il existe une véritable corrélation entre les deux.
+
+ De plus, on a également observer un baisse général de la criminalité en Suisse depuis 2012.
+
+ Enfin, il pourrait intéressant de faire la même étude mais plutôt par type d'infraction, exemple: les cantons où il y a le moins/plus de cambriolage par habitant. 
+
 

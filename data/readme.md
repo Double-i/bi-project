@@ -1,11 +1,4 @@
-# data
-!!!!!!!!  
-TODO
-- export les images
-- explication installation
-- simplification code & clean
-- ajouter la possiblité de mettre des arguments pour les noms des fichiers
-- 
+# Données 
 
 
  !!!!!!!!!
@@ -79,9 +72,9 @@ Les données ont été importées en sélectionnant les colonnes suivantes. Les 
  
 
 ## Instruction à suivre
-Pour réproduire ces données importez les deux fichier CSV depuis le site avec les colonnes  comme indiqué dans les parties `Données sélectionnées` depuis le site Opendata.swiss ou prenez-les directement depuis le dossier `/data/raw/`. Suivez 
-- Ouvrez les fichiers avec un éditeur et supprimer 
-- Importez le repo.
+Pour réproduire ces données, importez les deux fichiers CSV depuis le site avec les colonnes comme indiqué dans les parties `Données sélectionnées` depuis le site Opendata.swiss ou prenez-les directement depuis le dossier `/data/raw/` de ce repo. Suivez ensuite ces instructions:
+- Ouvrez les fichiers avec un éditeur et supprimer les deux première lignes. (il s'agit du titre du dataset ainsi que d'une ligne vide)
+- Importez le repo ou le dossier avec les scripts `code/scripts/`.
 - Lancez un invite de commande et déplacer vous jusqu'au dossier `code/scripts/`
 - Lancez le script sur la population (`code/scripts/populationScript.js`) puis le second (`code/scripts/criminaliteScript.js`). (Suivez les instructions d'utilisation des scripts disponibles [ici](../code/readme.md) )
 
