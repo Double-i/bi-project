@@ -15,7 +15,7 @@ Les données correspondent aux années  <b>2010 à 2016</b>
 
 le fichier sur la population contient la population par canton et par année ainsi que d'autres données telles que l'âge moyen dans le canton.
 
-le fichier sur la criminalite contient, quant à lui, les nombre total d'infractions par canton et année.
+le fichier sur la criminalite contient, quant à lui, le nombre total d'infractions par canton et année.
 
 Les données sur la population ainsi que celle sur la criminalités ont été récoltées par Office fédéral de la statistique OFS qui est le centre de compétence de la statistique publique suisse.
 
