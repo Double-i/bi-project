@@ -19,7 +19,8 @@ arg
 
 populationFilePath = arg.popFile;
 criminaliteFilePath = arg.crimiFile;
-let output = arg.output || 'outputCriminalite.csv';
+let outputPath = arg.output || 'outputCriminalite.csv';
+
 
 // begin work...
 getIdCanton(populationFilePath, linkTables);
@@ -31,17 +32,16 @@ getIdCanton(populationFilePath, linkTables);
  */
 function writeFile(data)
 {
-    console.log(data);
     // write file
     jsonexport(data, {
         rowDelimiter: ';'
     }, function(err, csv) {
         if (err) return console.log(err);
 
-        fs.writeFile(output, csv, (err, fd) => {
+        fs.writeFile(outputPath, csv, (err, fd) => {
             if (err) {
                 if (err.code === 'EEXIST') {
-                    console.error('myfile already exists');
+                    console.error(outputPath+' already exists');
                     return;
                 }
                 throw err;
@@ -122,7 +122,7 @@ function read(filePath, callback)
         //if there is an error stop the script
         if (err) {
             if (err.code === 'ENOENT') {
-                console.error('file does not exist');
+                console.error(filePath+' does not exist');
                 return;
             }
             throw err;

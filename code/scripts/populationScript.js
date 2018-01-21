@@ -132,7 +132,7 @@ function sumRows(cantonsPopulation)
         let currentSexe         = cantonsPopulation[i]['Sexe'];
         let currentClasseAge    = cantonsPopulation[i]['Classe d\'âge'];
         let currentPop          = cantonsPopulation[i]['Population résidante permanente et non permanente']
-        
+       
         // array of the max age and min age of the current raw
         let currentMinMaxAge    = currentClasseAge.match(ageRegex);
         
